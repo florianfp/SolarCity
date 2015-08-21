@@ -7,6 +7,10 @@ import seaborn as sns
 import numpy as np
 import datetime as dt
 sns.set_style("darkgrid")
+import os
+
+os.system ("python support.py")
+os.system ("python extraction.py")
 
 #%%Parameters
 energy_capacity = pd.read_excel('Battery_degradation.xlsx', sheetname='Retention')
