@@ -45,9 +45,9 @@ for year in [2012, 2013, 2014]:
     daysPerMonth = {1:31,2:28,3:31,4:30,5:31,6:30,7:31,8:31,9:30,10:31,11:30,12:31}
     for month in range(1,13):
         df_month = pd.DataFrame()
-        for day in range(1, daysPerMonth[month]):
+        for day in range(1, 3):
             print str(day)+'/'+str(month)+'/'+str(year)
             df_day = get_node_price(node1, 2015, month, day, 2015, month, day+1)
             df_month = pd.concat([df_month, df_day])
-        df_month.to_csv('VACA_'+str(year)+'_'+str(month)+'.xlsx')
+        df_month.to_csv('VACA_'+str(year)+'_'+str(month)+'.csv')
         print 'Completed '+str(month)
